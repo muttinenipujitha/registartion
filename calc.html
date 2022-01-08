@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            background-color: chartreuse;
+            width:100px;
+            text-align:center;
+            margin-bottom:10px;
+            position: relative;
+            left:150px
+        }
+        .div2{
+            background-color: coral;
+            width: 400px;
+            height: 500px;
+            position: relative;
+            left:600px
+        }
+    </style>
+    <script>
+       function clr()
+       {
+           document.getElementById("text1").value="";
+       }
+       function p(sym){
+        document.getElementById("text1").value+=sym;
+       }
+       function equate()
+       {
+           let p=document.getElementById("text1").value;
+           let s=eval(p);
+           document.getElementById("text1").value=s;
+       }
+
+
+
+    </script>
+</head>
+<body align="center">
+    <div class="div2" >
+    <div class="div1" >Calculator</div>
+    <table align="center" border="1">
+        <tr>
+            <td colspan="5"><input type="text"id="text1"></td>
+            <td><input type="button" value="clr"id="btn"onclick="clr()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1"onclick="p('1')"></td>
+            <td><input type="button" value="2"onclick="p('2')"></td>
+            <td><input type="button" value="3"onclick="p('3')"></td>
+            <td><input type="button" value="/"onclick="p('/')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="4"onclick="p('4')"></td>
+            <td><input type="button" value="5"onclick="p('5')"></td>
+            <td><input type="button" value="6"onclick="p('6')"></td>
+            <td><input type="button" value="*"onclick="p('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7"onclick="p('7')"></td>
+            <td><input type="button" value="8"onclick="p('8')"></td>
+            <td><input type="button" value="9"onclick="p('9')"></td>
+            <td><input type="button" value="+"onclick="p('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="."onclick="p('.')"></td>
+            <td><input type="button" value="0"onclick="p('0')"></td>
+            <td><input type="button" value="*"onclick="p('*')"></td>
+            <td><input type="button" value="="onclick="equate()"></td>
+            
+            
+
+
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
